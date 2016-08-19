@@ -21,15 +21,66 @@ The beamline optics for the horizontal and vertical planes are shown in Figure~\
 %\fixme{Need simulation results from Nikos}
 A full simulation of the H4 beamline has been recently performed (thanks to N. Charitonidis). Preliminary results are included in the following (a full check of the results has to be performed).
 The GEANT4 model includes the H4 upstream beamline and the tertiary beamline.  Target, magnets, collimators and a preliminary assumption about beam instrumentation are included. The secondary target has been modeled as a R=30mm L=300mm Tungsten cyliner for   E<3GeV and a s aCopper cylinder of the same dimensions  if E>=3 GeV. Optimization is ongoing.
-Table \ref{tab:beampartcomp} describes the particle composition of the beam  
-\begin{itemize}
-\item particle spectra
-\item expected rates
-\item expected beam dimensions 
-\end{itemize}
+Table \ref{tab:beampartcomp} describes the particle composition of the beam  at the entrance of the cryostat. Two features are evident. The
+first one is that the beam is dominated by positrons at low energies,
+the second is that the kaon content, and in a lesser extent the pion
+one are  depleted
+by decays along the beamline. 
+\begin{table}{tbh}
+\label{tab:beampartcomp}
+\caption{Beam composition (in percentage)  at the cyostat entrance, particles contained
+  the beam pipe}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Momentum (GeV/c) & e$^+$ & $K^+$ & $\mu^+$ & p& $\pi^+$\\
+1 & 69.7 & 0& 0.3 & 17.3 & 12.7\\
+2 &37.2& 0.6& 1.7& 24.1&36.3\\
+3 & 63.6&0.8&0.6&8.2&26.8\\
+4 & 46.4 & 1.8 & 1.1 & 8.5 & 42.1 \\
+37.2 & 2.8 & 0.9 & 8.6 & 50.6\\
+27.7 & 4.0 & 0.9& 10.2 & 57.3\\
+20.7 & 4.8 & 1.0 & 10.7 & 62.8 \\
+\hline
+\end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%
+Achievable particle rates, assuming a spill intensity of $10^6$
+particles on the secondary target and the SPS spill length of 4.8
+seconds are reported in Table~\ref{tab:beampartrates}. 
+\begin{table}{tbh}
+\label{tab:beampartrates}
+\caption{Trigger rate  }
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Momentum (GeV/c) & e$^+$ & $K^+$ & $\mu^+$ & p& $\pi^+$& total\\
+
+1 & 14 & 0 & 0 & 4 & 3  & 20 \\
+2 & 10 & 0 & 0 & 7 & 10 & 27 \\
+3 & 90 & 1 & 1 & 12 & 38 & 141\\
+4 & 68 & 3 & 2 & 12 & 61 & 146\\
+5 & 56 & 4 & 1 & 13 & 76 & 149\\
+6 & 47 & 7 & 1 & 17 & 97 & 169\\
+7 & 41 & 9 & 2 & 21 & 123& 196\\
+\hline
+\end{tabular}
+\end{table}
+At momenta larger than about 4 GeV, the particle rates are near to the
+maximum acceptable rate to avoid event pileup, that is around
+100Hz. At lower energies, the proton and pion rate is much lower, down
+of  factor of 10 at 1 or 2 GeV, and is, as already said, overwhelmed
+by the positron rate.
+
+The momentum spread of the beam is of the order of 5 to 7 \%. At higher energies, where
+the particle rate is higher, the momentum spread  can be narrowed by
+closing the collimators, at the expenses of the beam intensity  For example, Figure \ref{fig:momcoll} shows
+that at p=4~GeV/c the momentum uncertainty can be  reduced to $\Delta p/p= 3.6%$ with a factor 4 reduction in trigger rate.  
+\begin{figure}
+\caption {Beam momentum uncertainty with different collimator openings
+at 4 GeV/c}
+  \includegraphics[width=0.95\textwidth]{Slits.pdf}
+\end{figure}
 
 \subsection{Muon halo}
-
 
 
 
